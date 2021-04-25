@@ -17,15 +17,6 @@ class Main extends Component {
     }
 
     render() {
-        
-        // const Shop = ()=>{
-        //     return(
-        //         <Shop
-        //        products={this.State.products.filter(product => product.featured)[0]}
-        //         />
-        //     )
-        // }
-
      
         return (
             <div>
@@ -33,7 +24,7 @@ class Main extends Component {
                     <Switch>
                         <Route path='/home' component={Home} />
                         <Route path='/About' component={About} />
-                        <Route path='/Shop' component={Shop} />
+                        <Route exact path='/Shop' render={() => <Shop products={this.props.products} /> } />
                         <Redirect to='/home' />
                     </Switch>
                 <Footer />

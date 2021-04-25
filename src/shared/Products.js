@@ -1,37 +1,37 @@
 export const PRODUCTS =[
     {
         id: 0,
-        Name: 'Oils',
-        image:'/assets/images/christin-hume-0MoF-Fe0w0A-unsplash.jp',
+        name: 'Oils',
+        image:'/assets/images/anshu-a-7n5_0j7b7Hg-unsplash.jpg',
         featured: true,
-        Description:'',
+        description:'Some words',
         Cost: 15.99, 
         Stars: 4
     },
     {
         id: 2,
-        Name: 'Brushes',
+        name: 'Brushes',
         image:'/assets/images/shari-sirotnak-oM5YoMhTf8E-unsplash.jpg',
         featured: false,
-        Description:'',
+        description:'Some words',
         Cost: 15.99, 
         Stars: 4
     },
     {
         id: 3,
-        Name: 'BeardCare',
+        name: 'BeardCare',
         image:'/assets/images/supply-USghnHKesaM-unsplash.jpg',
         featured: false,
-        Description:'',
+        description:'Some words',
         Cost: 15.99, 
         Stars: 4
     },
     {
         id: 4,
-        Name: 'Blades',
+        name: 'Blades',
         image:'/assets/images/josh-sorenson-FvKpUZCbZ-s-unsplash.jpg',
         featured: false,
-        Description:'',
+        description:'Some words',
         Cost: 15.99, 
         Stars: 4
     },

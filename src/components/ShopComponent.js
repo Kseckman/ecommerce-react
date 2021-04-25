@@ -1,5 +1,6 @@
-import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import React, { Component} from 'react';
+import { PRODUCTS } from '../shared/Products';
+import RenderCard from './Cards';
 
 function ShopHeader(){
     return (
@@ -22,37 +23,66 @@ function ShopHeader(){
     )
 }
 
-// function RenderCard({item}) {
-   
+// const RenderCard= ({item})=> {
 //     return (
-//             <Card  style={{ width: '18rem' }}>
-//                 <Card.Img variant="top" src={item.image} />
-//                 <Card.Body>
-//                     <Card.Title>{item.name}</Card.Title>
-//                     <Card.Text>
-//                     Some quick example text to build on the card title and make up the bulk of
-//                     the card's content.
-//                     </Card.Text>
-//                     <Button variant="primary">Shop</Button>
-//                 </Card.Body>
+//         <div clasName=''>
+//             <Card key={product.id}>
+//                 <CardImg src={item.image} alt={item.name} />
+//                 <CardBody>
+//                     <CardTitle>{item.name}</CardTitle>
+//                     <CardText>{item.description}</CardText>
+//                 </CardBody>
 //             </Card>
+//         </div>
 //     );
 // }
 
+// function RenderCard({item}){
+//     return (
+//         <div clasName=''>
+//             <Card >
+//                 <CardImg src={item.image} alt={item.name} />
+//                  <CardBody>
+//                      <CardTitle>{item.name}</CardTitle>
+//                      <CardText>{item.description}</CardText>
+//                  </CardBody>
+//              </Card>
+//         </div>
+//     )
+// }
 
-function Shop(props){
-    return(
-        <React.Fragment>
-            <div id="header" class="container-fluid text-center">
-            <ShopHeader />
-                {/* <div class="row mt-5">
-                    <div class="col">
-                        <RenderCard item={props.products} />
-                    </div>
-                </div>     */}
-            </div>
-        </React.Fragment>
-    )
+
+   
+       
+
+
+class Shop extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {  
+           products: PRODUCTS
+        };
+    }
+    
+    
+    render(){
+        let productPage = this.state.products.map(product => {
+            return(
+                <RenderCard key={product.id} product={product}/>
+            )
+        })
+        return(
+            <React.Fragment>
+                <div id="header" class="container-fluid text-center">
+                <ShopHeader />
+                </div>
+                <div class="container text-center">
+                    {productPage}
+                </div>       
+            </React.Fragment>
+        )
+    }
 }
 
 export default Shop;
