@@ -11,10 +11,9 @@ class RenderCard extends Component{
     render(){
         let {image, name, description} = this.props.product;
         return (
-            <div clasName='row mt-4 card-container shop bx-shadow'>
-                <div className='col-12 col-md-4' >
-                    <Card clasName='card-container shop bx-shadow'>
-                        <CardImg src={image} alt={name} />
+                <div className=' card-container bx-shadow'>
+                    <Card>
+                        <CardImg  src={image} alt={name} />
                         <CardBody>
                             <CardTitle>{name}</CardTitle>
                             <CardText>{description}</CardText>
@@ -22,7 +21,6 @@ class RenderCard extends Component{
                         <Button className='btn-dark'>Shop</Button>
                     </Card>
                 </div>
-            </div>
         )
     }
 }

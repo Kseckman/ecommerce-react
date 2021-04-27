@@ -69,7 +69,9 @@ class Shop extends Component {
     render(){
         let productPage = this.state.products.map(product => {
             return(
-                <RenderCard key={product.id} product={product}/>
+                <div className="col-12 col-md-4 mt-4  shop">
+                    <RenderCard  key={product.id} product={product}/>
+                </div>
             )
         })
         return(
@@ -77,8 +79,10 @@ class Shop extends Component {
                 <div id="header" class="container-fluid text-center">
                 <ShopHeader />
                 </div>
-                <div class="container text-center">
-                    {productPage}
+                <div class="container text-center mt-4">
+                    <div className="row">
+                        {productPage}
+                    </div>
                 </div>       
             </React.Fragment>
         )

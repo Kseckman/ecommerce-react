@@ -209,6 +209,7 @@ h2{
   transform: scale(1.1);
 }
 
+
 .bx-shadow{
   -webkit-box-shadow: 1px 2px 5px 3px rgba(0,0,0,0.24); 
   box-shadow: 1px 2px 5px 3px rgba(0,0,0,0.2);
